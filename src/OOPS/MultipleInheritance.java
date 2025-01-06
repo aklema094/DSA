@@ -2,9 +2,11 @@
 package OOPS;
 interface First{
     public void firstI();
+    public void run();
 }
 interface Sec{
     public void secI();
+    public void run();
 }
 
 class C implements First, Sec{
@@ -12,6 +14,10 @@ class C implements First, Sec{
     @Override
     public void firstI() {
         System.out.println("First");
+    }
+    
+    public void run(){
+        System.out.println("can run");
     }
 
     @Override
@@ -27,6 +33,7 @@ public class MultipleInheritance {
         C c = new C();
         c.firstI();
         c.secI();
+        c.run();
        
     }
     

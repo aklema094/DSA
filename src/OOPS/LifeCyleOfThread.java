@@ -1,9 +1,6 @@
 
 package OOPS;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class LifeCyleOfThread extends Thread{
     @Override
     public void run(){

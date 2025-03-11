@@ -19,9 +19,7 @@ public class InturruptThreadMethod extends Thread{
     public static void main(String[] args) {
         InturruptThreadMethod t1 = new InturruptThreadMethod();
         t1.start();
-        t1.interrupt();
-        
-        
+        t1.interrupt();      
     }
     }
     

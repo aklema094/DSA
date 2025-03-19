@@ -54,7 +54,14 @@ class Task2 implements Runnable{
 
     @Override
     public void run() {
-        paper.writeWithPaperAndPen(pen);
+       // paper.writeWithPaperAndPen(pen);
+        
+        //to resolve deadlock we have to write this
+        
+        synchronized(pen){
+            paper.writeWithPaperAndPen(pen);
+        }
+        
     }
     
 }

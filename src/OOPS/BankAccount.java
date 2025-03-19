@@ -26,6 +26,8 @@ public class BankAccount {
                   balance -= amount;
               System.out.println(Thread.currentThread().getName()+" completed withdrawal " + amount);
              }catch(InterruptedException e){
+                       System.out.println(e.getMessage());
+                 Thread.currentThread().interrupt();
                  
              }finally{
                        lock.unlock();
@@ -41,7 +43,8 @@ public class BankAccount {
            }
            
        }catch(Exception e){
-           
+           System.out.println(e.getMessage());
+            Thread.currentThread().interrupt();
        }
     }
 }

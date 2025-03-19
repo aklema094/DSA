@@ -43,7 +43,7 @@ public class ReadWriteLocksExample {
         Runnable read = new Runnable(){
             @Override
             public void run() {
-                for (int i = 0; i < 5; i++) {
+                for (int i = 0; i < 3; i++) {
                     System.out.println(Thread.currentThread().getName()+" read : "+rw.getData());
                 }
             }
@@ -53,7 +53,7 @@ public class ReadWriteLocksExample {
          Runnable write = new Runnable(){
             @Override
             public void run() {
-                for (int i = 0; i < 5; i++) {
+                for (int i = 0; i < 3; i++) {
                     rw.increment();
                     System.out.println(Thread.currentThread().getName()+" write : incremented ");
                 }
